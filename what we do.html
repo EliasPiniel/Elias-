@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What We Do Section</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="text-content">
+        <h1>What we Do</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Augue ullamcorper nunc
+          porttitor donec aliquet. Pretium tincidunt facilisi nibh nec nec
+          dignissim vitae. Mattis praesent ut
+        </p>
+      </div>
+
+      <div class="carousel">
+        <img src="services_1.jpg" alt="side" class="side" />
+        <img src="services_2.jpg" alt="left" class="active" />
+        <img src="services.jpg" alt="main" class="side" />
+        <img src="services.jpg" alt="right" class="side" />
+        <!-- <div class="icon">➜</div> -->
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".carousel img");
+      const dots = document.querySelectorAll(".dot");
+
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function () {
+          // Ondoa active kwa picha zote na dots
+          for (let j = 0; j < images.length; j++) {
+            images[j].classList.remove("active");
+            dots[j].classList.remove("active");
+          }
+
+          // Weka active kwa picha na dot sahihi
+          images[i].classList.add("active");
+          dots[i].classList.add("active");
+        });
+      }
+    </script>
+  </body>
+</html>

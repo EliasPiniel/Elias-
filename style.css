@@ -1,0 +1,509 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #0a1236;
+  line-height: 1.6;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  background: #1e4bff;
+  border-radius: 5px;
+  display: inline-block;
+  transition: 0.3s;
+  color: white;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  background: #003bd1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #000;
+  padding: 0.3rem 1rem;
+  margin: 50px 50px 0 50px;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 1rem;
+  color: #000;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin-top: 1.5rem;
+  gap: 20px;
+}
+
+.navbar ul li {
+  position: relative; 
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.arrow {
+  font-size: 0.7em;
+  margin-left: 5px;
+  user-select: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 10px 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.dropdown-item:last-of-type {
+  border-bottom: none;
+}
+
+.dropdown-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-item p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: gray;
+}
+.view-all {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 90%;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #2e66ff;
+  margin: 0 auto 40px auto;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #0a1236;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 15px;
+  color: #333;
+}
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('codes.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+
+.projects-section h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project {
+  width: 90px;
+}
+
+.project-card {
+  display: flex;
+  height: 400px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-text {
+  max-width: 400px;
+  flex: 1;
+  text-align: left;
+}
+
+.project-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #c9c9c9;
+}
+
+.project-text .btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #1e50ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.project-cards-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.project-card-images {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-card-images::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  margin-right: 10px;
+  border: 2px solid #1e4bff;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.active-card {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.project1 {
+  background-image: url('api.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.project2 {
+  background-image: url('mobile.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.project3 {
+  background-image: url('code.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #1e4bff;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-content {
+  max-width: 400px;
+}
+
+.text-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.loren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.loren img {
+  width: 100px;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+  transform: scale(0.8);
+  border-radius: 10px;
+}
+
+.loren img.active {
+  width: 300px;
+  opacity: 1;
+  transform: scale(1);
+}
+.clients {
+  background-color: #0c1e4a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 250px;
+}
+
+.clients h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  overflow: hidden;
+}
+
+.client img {
+  height: 50px;
+}
+footer {
+  background: linear-gradient(hsl(229, 69%, 13%), hsl(228, 66%, 22%), hsl(228, 87%, 39%));
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 70px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 10px;
+  align-self: flex-start;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.about,
+.quick-links,
+.services,
+.contact-us {
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.contact-us {
+  max-width: 200px;
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.line {
+  width: 900px;
+  background-color: white;
+  height: 1px;
+  margin: 50px;
+}
+
+.line p {
+  text-align: center;
+  border-top: 1px solid #2c3e50;
+  padding-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+footer p,
+a {
+  font-weight: 100;
+  color: white;
+}
+
