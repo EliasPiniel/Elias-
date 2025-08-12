@@ -9,66 +9,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="navbar">
-  <div class="logo"> <img src="logo.jpg" alt="Amecore Logo"> <span>Amecore</span></div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="About.html">About</a></li>
-    <li class="dropdown">
-      <a href="#">Services <span class="arrow">▾</span></a>
-      <div class="dropdown-menu">
-        <div class="dropdown-item">
-          <h4><a href="">Digital Evolution</a></h4>
-          <p><a href="">Empower your business to adapt and thrive</a></p>
-        </div>
-        <div class="dropdown-item">
-          <h4><a href="">Cloud Integration</a></h4>
-          <p><a href="">Leverage the full potential of cloud-first technologies</a></p>
-        </div>
-        <div class="dropdown-item">
-          <h4><a href="">Smart Applications</a></h4>
-          <p><a href="">Modernize operations with intelligent applications</a></p>
-        </div>
-        <a href="#" class="view-all">View All Services</a>
-      </div>
-    </li>
-
-    <li class="dropdown">
-  <a href="#">Projects <span class="arrow">▾</span></a>
-  <div class="dropdown-menu">
-    <div class="dropdown-item">
-      <h4><a href="">Recent Work</a></h4>
-      <p><a href="">Explore our most recent projects</a></p>
+    <div class="logo"> <img src="logo.jpg" alt="Amecore Logo"> <span>Amecore Technologies</span></div>
+    <div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="dropdown-item">
-      <h4><a href="">Case Studies</a></h4>
-      <p><a href="">In-depth analysis of our successful implementations</a></p>
+    <div class="get-started">
+      <a href="#">Get Started</a>
     </div>
-    <a href="#" class="view-all">View All Services</a>
-  </div>
-</li>
+  </header>
 
-
-
-    <li><a href="Contact.html">Contact</a></li>
-  </ul>
-  <div>
-    <a href="#" class="btn">Get Started</a>
-  </div>
-</header>
 
   <section class="hero">
     <div class="hero-text">
-      <h1>Empowering Digital Growth with Smart Technology</h1>
+      <div class="hero-text content">
+         <h1>Empowering Digital Growth with Smart Technology</h1>
       <p>At Amecore Technologies, we craft cutting-edge IT solutions designed<br> to accelerate business transformation, foster innovation, and drive<br> sustainable success in a connected world.</p>
-      <a href="#" class="btn">Learn more →</a>
+      <div class="hero-buttons">
+        <a href="#" class="btn learn-more">Learn More</a>
+        <a href="#" class="btn get-started-hero">Get Started</a>
+      </div>
+    </div>
     </div>
     <div class="hero-image">
-      <img src="hero.jpg" alt="Digital Tech Image">
+      <img src="hero.jpg" alt="Digital Tech Image">  
+<!-- <source width="320" height="240" controls src="./Asset/1.mp4" type="video/mp4"></video> -->
     </div>
   </section>
-  <section class="values">
+  
 
+  <section class="values">
     <h2>Our Values</h2>
   <div class="underline"></div>
 
@@ -113,7 +90,6 @@
       </div>
     </div>
   </div>
-
   </section>
    
    <section class="projects-section">
@@ -125,11 +101,9 @@
     <div class="project-card">
       <div class="project-text">
         <h3>Project 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur.Vitae tempus aliquet molestie interdum laoreet tellus elementum et lectus.Tortor eget ac turpis mass ac id tortor duis. purus magna elementum purus metus bibendum. Faucibus leo tempus cursus elit cum maecenas ultricies volutpat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.Vitae tempus aliquet molestie interdum laoreet tellus elementum et lectus.Tortor eget ac turpis mass ac id tortor duis. purus magna elementum purus metus bibendum. Faucibus leo tempus cursus elit cum maecenas ultricies volutpat.</p></p>
         <a href="#" class="btn">Learn more →</a>
       </div>
-
-      
        <div class="project-cards-carousel">
     <div class="project-card-images" id="carousel">
       <div class="card project1 active-card"></div>
@@ -137,17 +111,17 @@
       <div class="card project3"></div>
     </div>
 
-    <div class="dots" id="dots">
+    <!-- <div class="dots" id="dots">
       <span class="dot active" data-index="0"></span>
       <span class="dot" data-index="1"></span>
       <span class="dot" data-index="2"></span>
-    </div>
+    </div> -->
   </div>
 
   <script>
     const carousel = document.getElementById("carousel");
     const cards = document.querySelectorAll(".card");
-    const dots = document.querySelectorAll(".dots .dot");
+    const dot = document.querySelectorAll(".dots");
 
     let currentIndex = 0;
     let interval;
@@ -189,26 +163,30 @@
       </div>
   </section>
 
-  <div class="section">
-    <div class="text-content">
-      <h1>What we Do</h1>
-      <p>Loren Ipsum dolor sit amet consectetur.Augue ullamcorper nunc porttitor donec aliquet.pretium tincidunt facilisi nibh nec dignissim vitae.mattis praesent ut</p>
-    </div>
 
-    <div class="loren">
+  <div class="what-we-do">
+    <div class="services-slider">
+      <div class="loren">
       <img src="service.jpg" alt="side" class="side">
       <img src="services.jpg" alt="left" class="active">
       <img src="services_1.jpg" alt="main" class="side">
       <img src="services_2.jpg" alt="right" class="side">
     </div>
-  </div>
-
-  <div class="dots">
+    <div class="dots">
     <span class="dot active"></span>
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
+    </div>
+
+    <div class="services-text-content">
+      <h1>What we Do</h1>
+      <p>Loren Ipsum dolor sit amet consectetur.Augue ullamcorper nunc porttitor donec aliquet.pretium tincidunt facilisi nibh nec dignissim vitae.mattis praesent ut</p>
+    </div>
+  </div>
+
+  
 
   <script>
     const images = document.querySelectorAll('.loren img');
@@ -225,6 +203,8 @@
       });
     }
   </script>
+
+
   <section class="clients">
     <div class="client-title">
       <h2>Our clients</h2>
@@ -242,14 +222,16 @@
   <footer>
     <div class="container">
       <div class="about">
-      <div class="logo"><h2>Amecore</h2></div>
+       <h2>Amecore</h2>
+        <div class="heading-line"></div>
       <p>Loren Ipsum dolor sit amet consectetur.Augue ullamcorper nunc porttitor donec aliquet.pretium tincidunt facilisi nibh nec dignissim vitae.mattis praesent ut
         loren Ipsum dolor sit amet consectetur.Augue ullamcorper nunc porttitor donec aliquet.pretium tincidunt facilisi nibh nec dignissim vitae.mattis praesent ut
       </p>
       </div>
       <div class="quick-links">
       <h2>Quick links</h2>
-      <ul >
+      <div class="heading-line"></div>
+      <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
@@ -259,6 +241,8 @@
     </div>
     <div class="services">
       <h2>Services</h2>
+      <div class="heading-line"></div>
+
       <ul >
         <li><a href="#">Digital solutions</a></li>
         <li><a href="#">Cyber Security</a></li>
@@ -270,6 +254,7 @@
     </div>
     <div class="contact-us">
       <h2>Contact Us</h2>
+      <div class="heading-line"></div>
       <ul >
         <li><a href="#">Mlimani Tower, 4th floor Opposite to Mlimani City Dar es Salaam</a></li>
         <li><a href="#">info@amecore.co.tz </a></li>
